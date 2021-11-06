@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Product Details</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-title">Products</div>
+    <div class="product-image">
+      <img th:src="@{|https://i.imgur.com/${product.image}|}"/>
+    </div>
+    <div class="product-detail">
+      <p th:text="${product.productname}"></p>
+      <p>
+        <span th:text="${product.description}" style="font-weight: lighter"></span>
+      </p>
+      <p>
+        Item code:
+        <span th:text="${product.product_id}" style="background: #f0ad4e; color: white; font-size: medium"></span
+        >
+      </p>
+      <p>manufacturer: <span th:text="${product.manufacturer}"></span></p>
+      <p>category: <span th:text="${product.category}" style="color: #428bd4"></span></p>
+      <p>
+        Availble units in stock: <span th:text="${product.quantity}" style="font-weight: lighter"></span>
+      </p>
+      <p style="font-weight: lighter"> <span th:text="${product.price}" style="font-weight: lighter"></span> USD</p>
+      <div class="left-btn">
+        <a class="back" th:href="${'/'}"
+          ><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i
+          >&nbsp;back</a
+        >
+      </div>
+      <div class="right-btn">
+        <a class="order" th:href="@{'/cart/buy/' + ${product.product_id}}">
+        <i class="fa fa-shopping-cart"
+            aria-hidden="true"
+            style="transform: scaleX(-1)"
+          ></i
+          >&nbsp;Order Now</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

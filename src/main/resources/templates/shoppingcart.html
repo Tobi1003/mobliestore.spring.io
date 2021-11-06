@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Add Product Page</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<div class="page-title">
+		<div style="float: left">
+			Products
+			<p id="add">All the selected products in your cart</p>
+		</div>
+	</div>
+	<div class="page-cart-prodcut">
+		<div class="div-btn">
+			<div class="left-div">
+				<a href="#"><i class="fa fa-times-circle"
+					aria-hidden="true"></i>&nbsp;Clear Cart</a>
+			</div>
+			<div class="right-div">
+				<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"
+					style="transform: scaleX(-1)"></i>&nbsp;Check out</a>
+			</div>
+		</div>
+		<div class="cart-product">
+			<table style="width: 100%" cellpadding="10">
+				<tr>
+					<th style="width: 40%;">Product</th>
+					<th style="width: 15%;">Quantity</th>
+					<th style="width: 15%;">Unit price</th>
+					<th style="width: 15%;">Price</th>
+					<th style="width: 15%;">Action</th>
+				</tr>
+				<tr th:each="item : ${session.cart}">
+					<td th:text="${item.product.productname}"></td>
+					<td th:text="${item.quantity}"></td>
+					<td th:text="${item.product.price}"></td>
+					<td th:text="${item.quantity * item.product.price}"></td>
+					<td><a
+						th:href="@{'/cart/remove/' + ${item.product.product_id}}"><i
+							class="fa fa-times-circle" aria-hidden="true"></i>&nbsp;Remove</a></td>
+				</tr>
+
+				<tr class="total">
+					<td></td>
+					<td></td>
+					<td>Grand Total</td>
+					<td th:utext="${total}"></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="continue-shopping">
+			<a th:href="${'/'}"><i class="fa fa-arrow-circle-o-left"
+				aria-hidden="true"></i>&nbsp;continue shopping</a>
+		</div>
+		<button style="display: inline" onclick="showDiv()">Comment</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Add Product Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+  
+    <div class="page-title">
+      <div style="float: left">
+        Products
+        <p id="add">All the available products in our store</p>
+      </div>
+      <div style="float: right; margin-right: 5%">
+			<a class="view-cart" href="#"> <i
+				class="fa fa-shopping-cart" aria-hidden="true"
+				style="transform: scaleX(-1)"></i>&nbsp;view cart
+			</a>
+		</div>
+    </div>
+    <div class="page-product">
+      <div class="show-product" th:each="product : ${listProducts}">
+      	<p th:text="${product.product_id}" hidden="true"></p>
+        <p id="name" th:text="${product.productname}"></p>
+        <img th:src="@{|https://i.imgur.com/${product.image}|}"/>
+        <p style="margin-right: 1%;" th:text="${product.description}"></p>
+        <p> <span th:text="${product.price}"></span> USD</p>
+        <p><span th:text="${product.quantity}"></span> units in stocks</p>
+        <div class="left-btn">
+          <a  class="back" th:href="@{'/detail/' + ${product.product_id}}"
+            ><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i
+            >&nbsp;Detail</a
+          >
+        </div>
+        <div class="right-btn">
+          <a class="order" th:href="@{'/cart/buy/' + ${product.product_id}}"
+            ><i
+              class="fa fa-shopping-cart"
+              aria-hidden="true"
+              style="transform: scaleX(-1)"
+            ></i
+            >&nbsp;Order Now</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

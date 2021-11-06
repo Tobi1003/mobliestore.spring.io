@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Add Product Page</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}" />
+</head>
+<body>
+	<div class="page-title">
+		<div style="float: left">
+			Products
+			<p id="add">Add products</p>
+		</div>
+		<div style="float: right; margin-right: 5%">
+			<!-- <button id="logout">logout</button> -->
+			<form th:action="@{/logout}" method="post">
+				<input id="logout" type="submit" value="Logout"/>
+			</form>
+		</div>
+	</div>
+	<div class="add-product">
+		Add new product
+		<hr />
+		<div class="test">
+			<form action="#" th:action="@{/save}" th:object="${product}"
+				method="post">
+				<table style="border: none; width: 100%" cellpadding="10">
+					<tr>
+						<td class="td1">Product Name</td>
+						<td class="td2"><input type="text" th:field="*{productname}" />
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">Unit Price</td>
+						<td class="td2"><input type="text" th:field="*{price}"/></td>
+					</tr>
+					<tr>
+						<td class="td1">Units in Stock</td>
+						<td class="td2"><input type="text" th:field="*{quantity}" />
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">Description</td>
+						<td class="td2"><textarea th:field="*{description}"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">Manufacturer</td>
+						<td class="td2"><input type="text" th:field="*{manufacturer}" />
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">Category</td>
+						<td class="td2"><input type="text" th:field="*{category}" /></td>
+					</tr>
+					<tr>
+						<td class="td1">Condition</td>
+						<td class="td2"><input type="radio" name="condition"
+							value="New" th:field="*{condition}" /><label
+							style="font-size: medium">New</label> <input
+							type="radio" name="condition" value="Old" th:field="*{condition}" /><label
+							style="font-size: medium">Old</label> <input
+							type="radio" name="condition" value="Refurbished"
+							th:field="*{condition}" /><label style="font-size: medium">Refurbished</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="td1">Image</td>
+						<td class="td2"><input type="file" th:field="*{image}" /></td>
+					</tr>
+					<tr>
+						<td class="td1"></td>
+						<td class="td2">
+							<button type="submit">Save</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

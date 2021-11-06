@@ -1,0 +1,343 @@
+body {
+  margin: 0px auto;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.page-title {
+  background: #eeeeee;
+  width: 95%;
+  height: 150px;
+  text-align: left;
+  font-size: 60px;
+  margin: 0px auto;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.product-add {
+  color: white;
+  background: #428bca;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.add-product {
+  float: left;
+  width: 90%;
+  height: 500px;
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 25px;
+  text-align: left;
+}
+
+.left-add {
+  width: 20%;
+  height: 400px;
+  float: left;
+  text-align: right;
+}
+
+.right-add {
+  width: 78%;
+  height: 450px;
+  float: right;
+  text-align: left;
+}
+
+.left-add p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
+#add {
+  padding-left: 0;
+  font-size: 25px;
+}
+
+.page-container {
+  width: 20%;
+  height: 200px;
+  margin-top: 5%;
+  border-radius: 5px;
+  margin-left: 40%;
+}
+
+.header-login {
+  background: #eeeeee;
+  height: 30px;
+  text-align: left;
+}
+
+table,
+th,
+td {
+  border: 1px solid #d3d3d3;
+}
+
+table {
+  border-collapse: collapse;
+}
+.footer-login {
+  height: 150px;
+}
+
+.header-login p {
+  padding-left: 5%;
+  font-weight: lighter;
+}
+
+.input {
+  width: 88%;
+  height: 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+#logout {
+  text-decoration: none;
+  width: 60px;
+  height: 25px;
+  background: #d9544f;
+  color: white;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+}
+
+#login {
+  background: #5cb85c;
+  color: white;
+  border: none;
+  width: 90%;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.product-image {
+  float: left;
+  width: 40%;
+  height: 500px;
+}
+
+.product-detail {
+  float: left;
+  width: 60%;
+  height: 500px;
+  text-align: left;
+}
+
+.product-detail p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.back {
+  color: white;
+  background: #5cb85c;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.order {
+  color: white;
+  background: #f0ac4e;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 15px;
+}
+
+.product-image img {
+  width: 50%;
+  height: 400px;
+}
+
+.view-cart {
+  background: white;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
+.left-btn {
+  float: left;
+  margin-left: 15px;
+}
+
+.right-btn {
+  float: left;
+  margin-left: 10px;
+}
+
+.show-product {
+  float: left;
+  width: 20%;
+  height: 550px;
+  text-align: left;
+  margin-left: 3%;
+  margin-top: 1%;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  padding-left: 1%;
+}
+
+.show-product img {
+  width: auto;
+  height: 150px;
+  padding-left: 25%;
+}
+
+.page-product {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 1%;
+}
+
+.test {
+  width: 100%;
+  height: auto;
+}
+
+.test table {
+  margin-left: 5%;
+}
+
+.test td {
+  border: none;
+}
+
+.td1 {
+  width: 10%;
+  text-align: right;
+}
+
+.td2 {
+  width: 40%;
+  padding-left: 1%;
+}
+
+.td2 input[type="text"] {
+  width: 200px;
+}
+
+.cart-product table {
+  font-size: 15px;
+  border: none;
+}
+
+.cart-product td,
+th {
+  border-left: none;
+  border-right: none;
+}
+
+.cart-product a {
+  display: block;
+  text-decoration: none;
+  width: 70px;
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 15px;
+  background: #d9544f;
+  color: white;
+}
+
+.div-btn {
+  width: 100%;
+  background: red;
+}
+
+.left-div {
+  width: 10%;
+  float: left;
+  margin-top: 25px;
+}
+
+.right-div {
+  width: 10%;
+  float: right;
+}
+
+.left-div a {
+  display: block;
+  text-decoration: none;
+  width: 80px;
+  border-radius: 5px;
+  height: 20px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background: #d9544f;
+  color: white;
+}
+
+.right-div a {
+  margin-top: 25px;
+  margin-left: 35px;
+  display: block;
+  text-decoration: none;
+  width: 80px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background: #5cb85c;
+  color: white;
+}
+
+.page-cart-prodcut {
+  float: left;
+  width: 90%;
+  height: 500px;
+  margin-left: 5%;
+  margin-top: 1%;
+  font-size: 25px;
+  text-align: left;
+}
+
+.total td {
+  border: none;
+  font-weight: bold;
+}
+
+.continue-shopping {
+  width: 100%;
+}
+
+.continue-shopping a {
+  display: block;
+  text-decoration: none;
+  width: 130px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background: #5cb85c;
+  color: white;
+}
+
+#name {
+	font-size: 25px;
+	font-weight: bold;
+}
